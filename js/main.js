@@ -14,7 +14,7 @@ function callAPI(text) {
       fillAllData();
     });
 }
-fetch("../API/queries.json")
+fetch("/API/queries.json")
   .then(function (response) {
     return response.json();
   })
