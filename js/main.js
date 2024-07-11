@@ -102,16 +102,19 @@ function productItemGenerator(id) {
     })
     .then(function (data) {
       itemData = data;
-      productContainer.classList.replace("d-none", "d-block");
+      productContainer.classList.replace("d-none", "d-flex");
       productItem.innerHTML = "";
       var itemContainer = document.createElement("div");
       itemContainer.className = "card";
       itemContainer.style = "width: 18rem";
+      var itemImgContainer = document.createElement("div");
+      itemImgContainer.className = "itemImg";
       var itemImg = document.createElement("img");
       itemImg.src = itemData.recipe.image_url;
-      itemImg.className = "card-img-top";
+      itemImg.className = "card-img-top ";
       itemImg.alt = itemData.recipe.publisher;
-      itemContainer.appendChild(itemImg);
+      itemImgContainer.appendChild(itemImg);
+      itemContainer.appendChild(itemImgContainer);
       var itemContent = document.createElement("div");
       itemContent.className = "card-body";
       var itemTitle = document.createElement("h5");
@@ -126,7 +129,7 @@ function productItemGenerator(id) {
       itemRank.className = "card-text";
       itemRank.innerHTML = `Social Rank: ${itemData.recipe.social_rank}`;
       itemContent.appendChild(itemRank);
-      itemContainer.itemContent;
+      itemContainer.appendChild(itemContent);
 
       var itemListGroup = document.createElement("ul");
       itemListGroup.className = "list-group list-group-flush scrollable-list";
@@ -155,7 +158,6 @@ function productItemGenerator(id) {
       // console.log(itemContainer);
       var itemButton = document.createElement("button");
       itemButton.className = "btn-close";
-      itemButton.ariaLabel = "Close";
       itemButton.id = "product-close-button";
       productItem.appendChild(itemButton)
       productItem.appendChild(itemContainer);
@@ -165,7 +167,7 @@ function productItemGenerator(id) {
         console.log(1);
         var productItem = document.querySelector("#product-container");
         console.log(productItem.className);
-        productItem.classList.replace("d-block", "d-none");
+        productItem.classList.replace("d-flex", "d-none");
         console.log(productItem.className);
       };
 
