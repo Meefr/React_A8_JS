@@ -90,3 +90,31 @@
 .menu ul li:last-child{
   border: none !important;
 }
+
+#product-item {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#product-container{
+  position: relative;
+  width: 50vw;
+  height: 60vh;
+}
+#product-close-button{
+  background-color: white;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+.card{
+  width: 100% !important;
+  /* height: 60% !important; */
+}
+
+.scrollable-list {
+  max-height: 200px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
