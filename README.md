@@ -38,7 +38,6 @@ JSON file (queries.json) that contains a collection of queries used in the websi
   "corn",
   "cucumber",
   "green pepper",
-  ...
   ]
 }
 
