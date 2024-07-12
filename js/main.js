@@ -175,3 +175,18 @@ function productItemGenerator(id) {
     });
 }
 
+function p(callback){
+  console.log(1);
+  callback()
+}
+
+function p2(callback){
+  console.log(2);
+  callback();
+}
+
+function p3(){
+  console.log(3);
+}
+
+p(()=>{p2(p3)})
